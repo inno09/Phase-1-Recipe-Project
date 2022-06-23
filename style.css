@@ -156,7 +156,12 @@ body{
       border: 1px solid #ccc;
     }
   }
-  
 
+ .col-4{
+  font-family: 'Times New Roman', Times, serif;
+ }
+.row{
+  background-color: white;
+}
 
 
