@@ -48,9 +48,12 @@ document.addEventListener("DOMContentLoaded",() => {
             console.log(meals.meals[0].strCategory);
         meal1Title.textContent = meals.meals[0].strMeal
         meal1Image.src = meals.meals[0].strMealThumb
+
+        
         
         meal2Title.textContent = meals.meals[1].strMeal
         meal2Image.src = meals.meals[1].strMealThumb
+
 
         meal3Title.textContent = meals.meals[2].strMeal
         meal3Image.src = meals.meals[2].strMealThumb
@@ -82,28 +85,36 @@ document.addEventListener("DOMContentLoaded",() => {
         meal12Title.textContent = meals.meals[11].strMeal
         meal12Image.src = meals.meals[11].strMealThumb
 
+        // document.getElementById("myBtn").addEventListener("click", function(){
+        //     this.style.backgroundColor = "red";
+        // });
+
+
+        
+        const allStars = document.querySelectorAll('.star')
+        let currentRating= document.querySelector('.cuttent-rating')
+        console.log(allStars);
+        allStars.forEach((star, i)=> {
+            star.addEventListener('click',function(){
+                let currentStarLevel = i + 1;
+                currentRating.innerHTML= `${currentStarLevel} 0f 5`
+        
+                allStars.forEach((star,j)=>{
+                    if(currentStarLevel>=j+1){
+                        star.innerHTML = '&#9733'
+                    } else{
+                        star.innerHTML = '&#9734'
+                    }
+                })
+            })
+        })
+
+        
+        
+
         }) 
     })
         
 
 
 
-// fetch("http://localhost:3000/beers")
-// .then((res)=>res.json())
-// .then((beers)=>{
-//   console.log(beers[1].reviews)
-//   // display beer one
-//   beerTitle.textContent = beers[0].name
-//   beerImage.src = beers[0].image_url
-//   beerDesc.textContent = beers[0].description
-//   //reviewList.textContent = beers[0].reviews
-//   beers[0].reviews.forEach(review => {
-//     let reviews = document.createElement('li')
-//     reviews.style.cursor ='pointer'
-//     reviews.innerText = review
-//     reviewList.appendChild(reviews)
-//     reviews.addEventListener("click", (e) => {
-//       e.preventDefault()
-//       review.remove()
-//     })
-//   })
