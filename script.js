@@ -88,8 +88,33 @@ document.addEventListener("DOMContentLoaded",() => {
         // document.getElementById("myBtn").addEventListener("click", function(){
         //     this.style.backgroundColor = "red";
         // });
+        
+        const toComment = document.querySelector('form')
+        toComment.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            handlecomment(e.target.comment.value)
+            toComment.reset()
+        })
+        
+        function handlecomment(todo){
+            let comments = document.createElement("li")
+            comments.textContent = todo
+        
+            let reviewList = document.querySelector('#review-list')
+            reviewList.appendChild(comments)
 
+        }
 
+        document.getElementById("btn").addEventListener("click", function(){
+            alert("hello world")
+        })
+        // alertPopUp = function (){
+        //     alert("THANK YOU FOR CHOOSING JUST A PINCH!")
+        // };
+        // let clickButton = document.querySelectorAll('.btn');
+        // clickButton.addEventListener('click',()=>{
+        //     alert = ('Ihave been clicked!')
+        // });
         
         const allStars = document.querySelectorAll('.star')
         let currentRating= document.querySelector('.cuttent-rating')
