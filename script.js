@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded",() => {
             console.log(meals.meals[0].strCategory);
         meal1Title.textContent = meals.meals[0].strMeal
         meal1Image.src = meals.meals[0].strMealThumb
-
+        
+        
         
         
         meal2Title.textContent = meals.meals[1].strMeal
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded",() => {
         meal12Title.textContent = meals.meals[11].strMeal
         meal12Image.src = meals.meals[11].strMealThumb
 
-        document.getElementById("myBtn").addEventListener("click", function(){
+        document.getElementById("btn").addEventListener("click", function(){
             this.style.backgroundColor = "red";
         });
         
@@ -105,9 +106,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
         }
 
-        document.getElementById("btn").addEventListener("click", function(){
-            alert("hello world")
-        })
+        const element = document.getElementById("btn");
+        element.addEventListener("click", function() {
+            document.getElementById("resp").innerHTML = "THANK YOU FOR CHOOSING JUST A PINCH!";
+        });
+    
         // alertPopUp = function (){
         //     alert("THANK YOU FOR CHOOSING JUST A PINCH!")
         // };
