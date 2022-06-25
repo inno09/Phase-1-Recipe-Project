@@ -4,7 +4,7 @@
 
 ## Link to Deployed Site
 
-<!-- [Add A Pinch](https://likearollinson.github.io/recipe-finder/) -->
+[Add A Pinch](https://inno09.github.io/Phase-1-Restaurant-Project/)
 
 ## Table of Contents
   * [Motivation and Technologies](#motivation)
