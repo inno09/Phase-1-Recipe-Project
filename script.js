@@ -85,9 +85,9 @@ document.addEventListener("DOMContentLoaded",() => {
         meal12Title.textContent = meals.meals[11].strMeal
         meal12Image.src = meals.meals[11].strMealThumb
 
-        // document.getElementById("myBtn").addEventListener("click", function(){
-        //     this.style.backgroundColor = "red";
-        // });
+        document.getElementById("myBtn").addEventListener("click", function(){
+            this.style.backgroundColor = "red";
+        });
         
         const toComment = document.querySelector('form')
         toComment.addEventListener('submit',(e)=>{
